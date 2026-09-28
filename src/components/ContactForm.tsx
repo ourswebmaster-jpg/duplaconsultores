@@ -49,8 +49,10 @@ export default function ContactForm() {
           <span>Mensagem</span>
           <textarea name="mensagem" required maxLength={5000} rows={4} />
         </label>
-        {/* Armadilha para bots: invisível para pessoas. */}
-        <input className="hp" name="empresa" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+        {/* Armadilha para bots: invisível para pessoas. O nome não pode ser nada que o preenchimento
+            automático do browser reconheça (já foi "empresa", e o browser enchia-o com o nome da
+            empresa — a mensagem era descartada como se fosse de um bot). */}
+        <input className="hp" name="hp_dp7" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       </div>
       <div className="card">
         <button className="btn" type="submit" disabled={status.kind === "sending"}>

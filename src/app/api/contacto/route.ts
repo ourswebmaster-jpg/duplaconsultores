@@ -21,7 +21,10 @@ export async function POST(req: Request) {
   const mensagem = str("mensagem");
 
   // Bot preencheu o campo escondido: responde como se tivesse corrido bem e não envia nada.
-  if (str("empresa")) return NextResponse.json({ ok: true });
+  if (str("hp_dp7")) {
+    console.warn("contacto: descartado pela armadilha de bots", { email });
+    return NextResponse.json({ ok: true });
+  }
 
   if (!nome || nome.length > 200) return NextResponse.json({ error: "Indique o seu nome." }, { status: 400 });
   if (!EMAIL_RE.test(email) || email.length > 200)
