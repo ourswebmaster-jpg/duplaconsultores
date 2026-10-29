@@ -6,6 +6,13 @@ Site de duplaconsultores.pt em Next.js 16 (App Router), sem Tailwind — CSS sim
 É um projeto **separado do ours-hub**: repo, projeto Vercel, variáveis e conta Resend próprios.
 Não partilhar código nem credenciais com o Hub.
 
+**Exceção controlada (29/10/2026, pedido do Hélder): o portal de formação-ação.** O diagnóstico
+(`/diagnostico`, perguntas em `src/content/diagnostico.ts`) envia para a rota **pública** de formulários
+do Hub (`hub.ours.pt/api/public/sites/duplaconsultores.pt/formulario/diagnostico`), como os sites de
+clientes da OURS: sem chaves, sem código partilhado. O Hub guarda e manda os emails. O plano do portal
+está no guia «Formação-ação» do Hub (`src/lib/manual/formacaoAcao.ts` do ours-hub). Mudar as dimensões
+do diagnóstico obriga a mudar `DIMENSOES_DUPLA` em `src/lib/sites/formularios.ts` do ours-hub.
+
 ## Regras
 
 - Commits autorados `Claude <noreply@anthropic.com>`. A integração no `main` é por fast-forward

@@ -14,6 +14,7 @@ npm run build
 ## Páginas
 
 - `/` — página inicial (herói, Sandra, Hélder, contactos + formulário)
+- `/diagnostico` — diagnóstico de maturidade digital e IA (portal de formação-ação; fora do índice por agora). Envia para o Hub da OURS pela rota pública de formulários
 - `/politica-de-privacidade`, `/politica-de-cookies`, `/termos-e-condicoes` — texto em `src/content/legal.ts`
 - `/duplaconsultores-brochura.pdf` — o URL antigo em `/wp-content/uploads/...` redireciona para aqui
 
