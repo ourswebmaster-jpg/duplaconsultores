@@ -15,8 +15,9 @@ export default function Footer() {
           <Link href="/politica-de-privacidade">Política de Privacidade</Link>
           <Link href="/politica-de-cookies">Política de Cookies</Link>
           <Link href="/termos-e-condicoes">Termos e Condições</Link>
-          {/* Crédito da agência (26/10/2026, pedido): mesmo estilo dos links legais, para não mudar o aspeto. */}
-          <a href="https://ours.pt" target="_blank" rel="noopener">Site por OURS</a>
+          {/* Crédito da agência (26/10/2026, pedido): mesmo estilo dos links legais, para não mudar o aspeto.
+              Aponta para a entrada em português (13/11/2026): a Dupla não tem página de projeto no portfólio. */}
+          <a href="https://ours.pt/pt-pt" target="_blank" rel="noopener">Site por OURS</a>
         </nav>
         <img className="footer__symbol" src="/img/dupla_logo_simbolo.svg" alt="Dupla" width={50} height={55} />
       </div>
